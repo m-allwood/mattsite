@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <title>Matt Allwood's Website</title>
+</head>
+<body>
+    <div class="heading">
+        <h1 title="working title: Yoke of Fate">Matt's Website</h1>
+    </div>
+    <nav>
+    <div class="navBar">
+        <div><a href="./index.html">Home</a></div>
+            <div class="navList"><a href="Javascript:void(0)">Projects</a>
+                <div class="navGroup">
+                    <a href="./pacecalc.html">Pace Calc</a>
+                    <a href="./brew.html">Brew Find</a>
+                </div>
+            </div>
+            <div><a href="./about.html">About</a></div>
+            <div><a href="./contact.html">Contact</a></div>
+    </div>
+    </nav>
+    <div class="subHead">
+        <h1>Main Page</h1>
+    </div>
+    <div id="about">
+        <h2 class="project-title">About:</h2>
+        <p>This my personal page where I try to do new things with Javascript, and cloud services</p>
+        <br>
+        <h3>Currently Posted:</h3>
+        <div class="Done">
+        <li> <button class="pjB" onclick="showhide('pj01');" >Pace Calculator</button></li>
+        <dd id="pj01" class="hidden">Calculates Pace, Distance, or Time. <a href="./pacecalc.html">Pace Calc</a></dd>
+        <li> <button class="pjB" onclick="showhide('pj02')">Brewerey Finder</button></li>
+        <dd id="pj02" class="hidden">Uses Open Brewery DB's API to find breweries in their database. Currently by Postal Code only. <a href="./brew.html">Brew Find</a></dd>
+        <li> <button class="pjB" onclick="showhide('pj03')" >Link to Resume</button></li>
+        <dd id="pj03" class="hidden">A web page version of my resume is running on an Oracle Compute Instance. <a href="http://resume.mattallwood.com"> Matt Allwood Resume</a></dd>
+        <li> <button class="pjB" onclick="showhide('pj04')" >This Site</button></li>
+        <dd id="pj04" class="hidden">Rather than running on a server/vm I manage, this site is a static web page of an AWS S3 bucket distributed by Cloud Front Distribution</dd>
+        </div>
+        <h3>Works-in-Progress:</h3>
+        <div class="WIP">
+        <li> <button class="pjB" onclick="showhide('pj05')">Visitor Counter for this site</button> </li>
+        <dd id="pj05" class="hidden">I plan to use API Gateway, Lambda, and DynamoDB to count and display times this page has been loaded. It will likely be working off of 30min old data to avoid scanning a whole table as a form of practice.</dd>
+        <!-- <li> <button class="pjB" onclick="showhide('pj06')">Recent runs from my Strave Page</button> </li>
+        <dd id="pj06" class="hidden">Strava has an API available and my goal is to display information on X number of most recent runs.</dd> -->
+        <li> <button class="pjB" onclick="showhide('pj08')">Bewerey Finder Upgrade</button></li>
+        <dd id="pj08" class="hidden">Adding Searching by state, type, and possibly city</dd>
+        <li> <button class="pjB" onclick="showhide('pj09')">Visitor Counter for Resume Site</button> </li>
+        <dd id="pj09" class="hidden">I plan to use Oracle Automous Database to count and display times the resume site has been loaded. Ideally I can also keep track of IPs and device types.</dd>
+        <li> <button class="pjB" onclick="showhide('pj10')">Mobile & Desktop versions for this site</button> </li>
+        <dd id="pj10" class="hidden">I plan to create different behaviors on Cloud Front Distribution to direct mobile users to a separate version from desktop users. Primary difference being a hamburger menu for mobile users and full menu for desktop users.</dd>
+        </div>
+    </div>
+    <br>
+    <h2 class="project-title">Pace Calculator</h2>
+    <div class="pace">
+        <p>Calculate Pace, Time, or Distance</p>
+        <form action="" class = "">
+            <ul class="fcont1">
+                <div class="paceVar">
+                <li class="fitem">
+                    <p>Time</p>
+                    <label for="hours">Hours:</label>
+                    <input type="number" pattern="[0-9]*" min="0" max ="80" id="hours" name="hours">
+                </li>
+                <li class="fitem">
+                    <label for="minutes">Minutes:</label>
+                    <input type="number" pattern="[0-9]*" min="0" max ="59"  id="minutes" name="minutes">
+                </li>
+                <li class="fitem">
+                    <label for="seconds">Seconds:</label>
+                    <input type="number" pattern="[0-9]*" min="0" max ="59" step="1" type="number" min="0" step="1"  id="seconds" name="seconds">
+                </li>
+                </div>
+                <div class="paceVar">
+                <li class="fitem">
+                    <p>Distance</p>
+                    <label for="distance">Miles:</label>
+                    <input type="number" pattern="[0,1,2,3,4,5,6,7,8,9,.]*" min=".5" id="distance" name="distance in miles">
+                    <select id="raceDist" onchange="raceDrop()">
+                        <option value="">Race</option>
+                        <option value="1">1 Mile</option>
+                        <option value="3.1">5K</option>
+                        <option value="5">5 Mile</option>
+                        <option value="6.2">10K</option>
+                        <option value="10">10 Mile</option>
+                        <option value="13.1">Half Marathon</option>
+                        <option value="26.2">Marathon</option>
+                        <option value="100">Barkley</option>
+                        <option value="135">Badwater</option>
+                    </select>
+                </li>
+                </div>
+                <div class="paceVar">
+                <li class="fitem">
+                    <p>Pace</p>
+                    <label for="pacemin">Pace Minutes:</label>
+                    <input type="number" pattern="[0-9]*" min="0" max ="59"  id="pacemin" name="pacemin">
+                </li>
+                <li class="fitem">
+                    <label for="pacesec">Pace Seconds:</label>
+                    <input type="number" pattern="[0-9]*" min="0" max ="59" step="1" type="number" min="0" step="1"  id="pacesec" name="pacesec">
+                </li>
+                </div>
+                <li class="fitem">
+                    <button id="calcRun" type="button" >RUN</button>
+                </li>
+                <li class="fitem">
+                    <button id="calcClear" type="button" >Clear</button>
+                </li>
+            </ul>
+        </form>
+        <div id="calcanswer"><p></p></div>
+
+        <div id="ShowCalcErr"><p></p></div>
+
+    </div>
+    
+    <div id="res-link">
+        <a href="http://resume.mattallwood.com"> Matt Allwood Resume</a>
+    </div>
+    <br>
+    <button type="button" id="showBs" class="hidden">Show Breweries</button>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <title>Matt Allwood's Website</title>
+</head>
+<body>
+    <div class="heading">
+        <h1 title="working title: Yoke of Fate">Matt's Website</h1>
+    </div>
+    <nav>
+    <div class="navBar">
+        <div><a href="./index.html">Home</a></div>
+            <div class="navList"><a href="Javascript:void(0)">Projects</a>
+                <div class="navGroup">
+                    <a href="./pacecalc.html">Pace Calc</a>
+                    <a href="./brew.html">Brew Find</a>
+                </div>
+            </div>
+            <div><a href="./about.html">About</a></div>
+            <div><a href="./contact.html">Contact</a></div>
+    </div>
+    </nav>
+</div>
+<br>
+<h2 class="project-title">Pace Calculator</h2>
+<div class="pace">
+    <p>Calculate Pace, Time, or Distance</p>
+    <form action="" class = "">
+        <ul class="fcont1">
+            <div class="paceVar">
+            <li class="fitem">
+                <p>Time</p>
+                <label for="hours">Hours:</label>
+                <input type="number" pattern="[0-9]*" min="0" max ="80" id="hours" name="hours">
+            </li>
+            <li class="fitem">
+                <label for="minutes">Minutes:</label>
+                <input type="number" pattern="[0-9]*" min="0" max ="59"  id="minutes" name="minutes">
+            </li>
+            <li class="fitem">
+                <label for="seconds">Seconds:</label>
+                <input type="number" pattern="[0-9]*" min="0" max ="59" step="1" type="number" min="0" step="1"  id="seconds" name="seconds">
+            </li>
+            </div>
+            <div class="paceVar">
+            <li class="fitem">
+                <p>Distance</p>
+                <label for="distance">Miles:</label>
+                <input type="number" pattern="[0,1,2,3,4,5,6,7,8,9,.]*" min=".5" id="distance" name="distance in miles">
+                <select id="raceDist" onchange="raceDrop()">
+                    <option value="">Race</option>
+                    <option value="1">1 Mile</option>
+                    <option value="3.1">5K</option>
+                    <option value="5">5 Mile</option>
+                    <option value="6.2">10K</option>
+                    <option value="10">10 Mile</option>
+                    <option value="13.1">Half Marathon</option>
+                    <option value="26.2">Marathon</option>
+                    <option value="100">Barkley</option>
+                    <option value="135">Badwater</option>
+                </select>
+            </li>
+            </div>
+            <div class="paceVar">
+            <li class="fitem">
+                <p>Pace</p>
+                <label for="pacemin">Pace Minutes:</label>
+                <input type="number" pattern="[0-9]*" min="0" max ="59"  id="pacemin" name="pacemin">
+            </li>
+            <li class="fitem">
+                <label for="pacesec">Pace Seconds:</label>
+                <input type="number" pattern="[0-9]*" min="0" max ="59" step="1" type="number" min="0" step="1"  id="pacesec" name="pacesec">
+            </li>
+            </div>
+            <li class="fitem">
+                <button id="calcRun" type="button" >RUN</button>
+            </li>
+            <li class="fitem">
+                <button id="calcClear" type="button" >Clear</button>
+            </li>
+        </ul>
+    </form>
+    <div id="calcanswer"><p></p></div>
+
+    <div id="ShowCalcErr"><p></p></div>
+
+</div>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>
