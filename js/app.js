@@ -119,6 +119,9 @@ let givepace = () => {
             
             if(GetRateS < 10) {
                 GetRateS = ('0' + GetRateS);
+
+            if(GetRateM < 10) {
+                GetRateM = ('0' + GetRateM);
             } else; 
            
             GotPace = `Pace: ${GetRateM}:${GetRateS} per mile`;
@@ -142,6 +145,9 @@ let givepace = () => {
     
             if( GetTimeS < 10) {
                 GetTimeS = ('0' + GetTimeS)
+
+            if(GetTimeM < 10) {
+                GetTimeM = ('0' + GetTimeM);
             } else;
     
             let GotTime = `Time: ${GetTimeH}:${GetTimeM}:${GetTimeS}`;
