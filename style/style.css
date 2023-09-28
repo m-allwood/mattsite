@@ -1,6 +1,6 @@
 
 html {
-    background: linear-gradient(to top left,  rgba(231, 164, 39, 0.603) 0%, rgba(85, 37, 71, 0.288) 100%);
+    background: linear-gradient(to top left,  rgba(76, 89, 88, 0.903) 30%, rgba(191, 191, 191, 0.888) 95%);
 }
 
 *{
@@ -33,7 +33,7 @@ html {
     flex-direction: row;
     justify-content: left;
     border-radius: 0.5em;
-    border-style: solid;
+    border-style: none;
     list-style: none;
     font-size: larger;
     font-weight: bold;
@@ -41,7 +41,7 @@ html {
     margin-bottom: 1em;
     margin-left: 2em;
     margin-right: 2em;
-    background-color: rgba(92, 218, 109, 0.719);
+    background-color: rgba(137, 217, 157, 0.319);
 }
 
 .navBar *{
@@ -68,9 +68,9 @@ html {
     border-bottom-right-radius: 0.5em;
     border-top-right-radius: 0em;
     border-top-left-radius: 0em;
-    border-style: solid;
+    border-style: none;
     border-top: 0em;
-    background-color: rgba(92, 218, 109, 0.9); 
+    background-color: rgba(137, 217, 157, 0.9); 
 }
 
 .navList:active .navGroup{
@@ -87,9 +87,9 @@ html {
     border-bottom-right-radius: 0.5em;
     border-top-right-radius: 0em;
     border-top-left-radius: 0em;
-    border-style: solid;
+    border-style: none;
     border-top: 0em;
-    background-color: rgba(92, 218, 109, 0.9); 
+    background-color: rgba(137, 217, 157, 0.9); 
 }
 
 .navGroup:active{
@@ -111,7 +111,7 @@ html {
 }
 
 .WIP{
-    background: linear-gradient(to top left, rgba(143, 205, 224, 0.473) 0%, rgba(224, 214, 123, 0.425) 100%);
+    background: linear-gradient(to top left, rgba(60, 166, 166) 0%, rgba(138, 166, 163, 0.438) 100%);
     padding: 1em;
 }
 
@@ -121,7 +121,7 @@ html {
 
 
 .Done{
-    background: linear-gradient(to top left, rgba(95, 155, 100, 0.432) 0%, rgba(240, 173, 229, 0.425) 100%);
+    background: linear-gradient(to top left, rgba(60, 166, 166) 0%, rgba(230, 141, 230, 0.438) 100%);
     padding: 1em;
 }
 
@@ -146,10 +146,10 @@ html {
 #about p{
     margin-left: 1em;
     margin-right: 1em;
-    border-style: solid;
+    border-style: none;
     border-radius: 1em;
     padding: 1em;
-    background: linear-gradient(to top left, rgba(236, 168, 43, 0.479) 0%, rgba(230, 141, 230, 0.438) 100%);
+    background: linear-gradient(to top left, rgba(60, 166, 166) 0%, rgba(138, 166, 163, 0.438) 100%);
 }
 
 .hidden{
@@ -166,7 +166,7 @@ html {
     margin-left: 1em;
     margin-right: 1em;
     padding: 1em;
-    background: linear-gradient(to top left, rgba(132, 157, 224, 0.308) 0%, rgba(168, 92, 20, 0.562) 100%);
+    background: linear-gradient(to top left, rgba(60, 166, 166) 0%, rgba(230, 141, 230, 0.438) 100%);
 }
 
 .project-title h2{
@@ -224,7 +224,7 @@ html {
     margin-left: 1em;
     margin-right: 1em;
     padding: 1em;
-    background: linear-gradient(to top left, rgba(224, 132, 196, 0.308) 0%, rgba(20, 168, 168, 0.432) 100%);
+    background: linear-gradient(to top left, rgba(60, 166, 166) 0%, rgba(230, 141, 230, 0.438) 100%);
 }
 
 .thanks{
@@ -239,7 +239,7 @@ html {
     margin-left: 1em;
     margin-right: 1em;
     padding: 1em;
-    background: linear-gradient(to top left, rgba(224, 132, 196, 0.308) 0%, rgba(20, 168, 168, 0.432) 100%);
+    background: linear-gradient(to top left, rgba(60, 166, 166) 0%, rgba(230, 141, 230, 0.438) 100%);
 }
 
 #contact{
@@ -255,7 +255,7 @@ html {
     margin-right: 1em;
     border-radius: 1em;
     padding: 1em;
-    background: linear-gradient(to top left, rgba(236, 168, 43, 0.479) 0%, rgba(230, 141, 230, 0.438) 100%);
+    background: linear-gradient(to top left, rgba(60, 166, 166) 0%, rgba(230, 141, 230, 0.438) 100%);
 }
 
 #contact a{
@@ -270,4 +270,4 @@ html {
     margin-bottom: 5em;
     margin-left: 2em;
     margin-right: 2em;
-}
+}   
